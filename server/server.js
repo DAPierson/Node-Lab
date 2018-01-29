@@ -22,7 +22,7 @@ let chirpArray = [
 },
 ]
 
-let chirps =JSON.stringify(chirpArray)
+let chirps =JSON.stringify(chirpArray, null, 2)
 
 fs.writeFile(chirpPath,chirps, (err)=>{
     if(err)console.log(err);
@@ -32,7 +32,7 @@ fs.writeFile(chirpPath,chirps, (err)=>{
     },(err,chirps)=> {
         console.log(chirps);
     }  )
-
+ 
 });
 
 
